@@ -38,6 +38,13 @@
             h2 {
                 margin-bottom: 8px;
             }
+            .box {
+                .body{
+                    @include t(){
+                        margin-bottom: 24px;
+                    }
+                }
+            }
 
             .imgBox {
                 width: 100%;
@@ -52,19 +59,22 @@
 
     .section03 {
         @include sectionPadding();
-
+        .container {
+            h2 {
+                margin-bottom: 20px;
+            }
+        }
         .row {
             justify-content: space-around;
             gap: 8px;
             .card {
-                @include m() {
-                    width: 100%;
-                }
-
-                @include d(1200px) {
+                @include t() {
                     width: 48%;
                 }
-
+                @include m() {
+                    width: 100%;
+                    margin: 0 24px;
+                }
                 width: 31.333%;
 
                 display: flex;
@@ -73,7 +83,7 @@
                 background-image: url('../images/about_m_bg_.svg');
                 background-repeat: no-repeat;
                 background-position: top center;
-                background-size: 100%;
+                background-size: cover;
                 padding: 80px 32px;
 
                 .imgBox {

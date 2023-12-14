@@ -5,28 +5,49 @@
         .container {
             display: grid;
             gap: 64px;
-            .col-5 {
-                p {
-                    margin-top: 8px;
-                }
-            }
-            .col-7 {
-                padding: 24px 64px;
-                .subTitle {
-                    margin-bottom: 8px;
-                    display: flex;
+            .row {
+                @include t() {
+                    flex-direction: column;
+                    justify-content: center;
                     align-items: center;
+                }
+                .leftBox {
+                    @include t() {
+                        width: 100%;
+                        text-align: center;
+                    }
+                    p {
+                        margin-top: 8px;
+                    }
                     .imgBox {
-                        width: 111px;
-                        height: 111px;
-                        margin-right: 8px;
-                        img {
-                            width: 100%;
-                            height: 100%;
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                .rightBox {
+                    padding: 24px 64px;
+                    @include t() {
+                        width: 100%;
+                        align-items: center;
+                        padding: 8px;
+                    }
+                    .subTitle {
+                        margin-bottom: 8px;
+                        display: flex;
+                        align-items: center;
+                        .imgBox {
+                            width: 111px;
+                            height: 111px;
+                            margin-right: 8px;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
                         }
                     }
                 }
             }
+
         }
     }    
 
@@ -79,6 +100,13 @@
         @include sectionPadding();
         .row {
             align-items: center;
+            @include t() {
+                gap: 24px;
+            }
+            .imgBox {
+                width: auto;
+                height: auto;
+            }
         }
         .leftBox {
             @include t() {
@@ -138,16 +166,30 @@
         @include sectionPadding();
         .row {
             align-items: center;
-            .content {
-                h2 {
-                    padding: 16px 0;
-                    margin-left: -20px;
-                }
-                li {
-                    margin: 10px 0;
-                    font-size: 20px;
+            @include t(){
+                flex-direction: column;
+            }
+            .leftBox {
+                @include t(){
+                    width: 100%;
                 }
             }
+            .rightBox {
+                @include t(){
+                    width: 100%;
+                }
+                .content {
+                    h2 {
+                        padding: 16px 0;
+                        margin-left: -20px;
+                    }
+                    li {
+                        margin: 10px 0;
+                        font-size: 20px;
+                    }
+                }
+            }
+
         }
     }
 

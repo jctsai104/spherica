@@ -1,35 +1,72 @@
 footer {
   @include gradient-bg($info, $green);
   padding: 70px 0;
+  @include m () {
+    padding: 40px 0 20px 0;
+  }
   margin-top: 30px;
   color: #ffffff;
-
-  h4 {
-    margin-bottom: 24px;
-  }
-
-  li {
-    list-style: none;
-    margin: 12px 0;
-  }
-
-  a {
-    color: #ffffff;
-    text-decoration: none;  
-    &:hover {
-      text-decoration: underline;
+  .row {
+    @include m(){
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
     }
-  }
-  .content {
-    margin-top: 32px;
-    p {
-      font-size: 14px;
-      margin-top: 8px;
+    h4 {
+      margin-bottom: 24px;
+      @include m(){
+        font-size: 16px;
+        margin-bottom: 0;
+      }
     }
-  }
-  .box {
-    width: 50%;
-    display: inline-block;
+    .rightBox, .middleBox, .leftBox {
+      @include m(){
+        width: 100%;
+        text-align: center;
+        margin: 6px 0;
+      }
+    }
+
+  
+    li {
+      list-style: none;
+      margin: 12px 0;
+      @include m () {
+        margin: 8px 0;
+      }
+    }
+  
+    a {
+      color: #ffffff;
+      text-decoration: none;  
+      @include m(){
+        font-size: 14px;
+        text-align: center;
+
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .content {
+      margin-top: 32px;
+      @include m () {
+        margin-top: 10px;
+      }
+      p {
+        font-size: 14px;
+        margin-top: 8px;
+        @include m () {
+          font-size: 10px;
+          margin-top: 4px;
+        }
+      }
+    }
+    .box {
+      width: 50%;
+      display: inline-block;
+    }
   }
 
 }

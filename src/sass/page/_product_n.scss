@@ -1,6 +1,9 @@
 .product_n {
     .section03 {
         .rightBox {
+            @include t(){
+                justify-content: center;
+            }
             justify-content: flex-end;
         }
     }

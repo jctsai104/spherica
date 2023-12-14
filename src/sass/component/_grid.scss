@@ -4,9 +4,6 @@
 }
 
 .container {
-    @include t(){
-        width: 100vmax;
-    }
     max-width: $layout_max_width;
     margin: auto;
     padding-left: 15px;

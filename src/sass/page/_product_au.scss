@@ -2,6 +2,9 @@
     .section03 {
         .row {
             .leftBox {
+                @include t(){
+                    padding-right: 0;
+                }
                 padding-right: 100px;
                 ul {
                     margin-left: 16px;

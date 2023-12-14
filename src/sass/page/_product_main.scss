@@ -2,15 +2,26 @@
     line-height: 1.5;
 
     .section01 {
-        @include sectionPadding();
+        padding-top: 60px;
 
         .leftBox {
+            @include t() {
+                width: 100%;
+                text-align: center;
+            }
             p {
                 text-align: right;
                 margin-top: 8px;
             }
+            .imgBox {
+                width: 100%;
+                height: auto;
+            }
         }
         .rightBox {
+            @include t() {
+                width: 100%;
+            }
             padding: 24px 64px;
             h2 {
                 margin-left: -20px;
@@ -39,7 +50,7 @@
         .row {
             margin: auto;
             @include t(){
-                justify-content: unset;
+                justify-content: center;
             }
             justify-content: space-between;
             .card {
