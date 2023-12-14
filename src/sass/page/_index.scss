@@ -270,21 +270,26 @@
                     }
                     .img-row {
                         justify-content: end;
+                        display: flex;
+                        flex-wrap: wrap;
+
+
                         @include t(){
-                            display: flex;
-                            flex-wrap: wrap;
+                            justify-content: center;
+
                         }
                     }
                 }
 
                 .four-box {
-                    @include t(){
+                    display: flex;
                         width: 45%;
                         height: 45%;
                         margin: 8px;
-                    }
-                     position: relative;
-                     margin: 8px;
+                    
+                    // width: 50%;
+                    position: relative;
+                    margin: 8px;
 
                     img {
                         width: 100%;

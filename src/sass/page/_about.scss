@@ -88,6 +88,7 @@
 
                 .imgBox {
                     width: 183px;
+                    height: unset !important;
 
                     @include d(1024) {
                         width: 100%;
