@@ -1,0 +1,36 @@
+.product_au {
+    .section03 {
+        .row {
+            .leftBox {
+                padding-right: 100px;
+                ul {
+                    margin-left: 16px;
+                }
+            }
+        }
+    }
+    .section05 {
+        .container {
+            .row {
+                .leftBox {
+                    display: grid;
+                    gap: 48px;
+                    .box {
+                        .first_title {
+                            margin-bottom: 36px;
+                        }
+                        h3 {
+                            color: $pri_blue;
+                            margin-bottom: 10px;
+                            line-height: 36px;
+                        }
+                        p {
+                            line-height: 1.5;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

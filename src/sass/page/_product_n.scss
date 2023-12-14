@@ -1,0 +1,26 @@
+.product_n {
+    .section03 {
+        .rightBox {
+            justify-content: flex-end;
+        }
+    }
+
+    .top_section {
+        .leftBox {
+            padding-right: 120px;
+        }
+        .rightBox {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 32px;
+            .content_box {
+                text-align: center;
+                p {
+                    color: $pri_grey;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}

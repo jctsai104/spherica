@@ -1,0 +1,27 @@
+.contact {
+    .section {
+        padding-bottom: 60px;
+
+        .center-box {
+            text-align: center;
+
+            .box {
+                &:nth-child(1) {
+                    margin-bottom: 48px;
+                }
+
+                h2 {
+                    margin: 18px 0;
+                }
+
+                a, p {
+                    line-height: 250%;
+                    color: $info;
+                    display: inline-block;
+                    text-decoration: none;
+                }
+            }
+
+        }
+    }
+}
