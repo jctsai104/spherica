@@ -6,6 +6,9 @@
 body {
    font-family: $fontFamily;
    font-size: 16px;
+   @mixin t() {
+      overflow-x: auto;
+   }
 }
 
 .wrapper {

@@ -43,23 +43,21 @@
             h2 {
                 text-align: center;
                 font-weight: 600;
-                display: flex;
-                align-items: center;
-                justify-content: center;
                 width: 100%;
                 color: $info;
             }
 
+            .content_box {
+                display: flex;
+                align-items: center;
+            }
             .imgBox {
-                position: absolute;
-                right: -15%;
-                top: 50%;
-                bottom: 0;
-                transform: translate(0, -50%);
+                margin: 10px;
                 width: 110px;
                 height: 105px;
 
                 img {
+                    object-fit: contain;
                     width: 100%;
                     height: 100%;
                 }
@@ -77,20 +75,47 @@
 
         .container {
             .row {
-                padding: 8px 0;
-
+                @include d(1160px){
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                justify-content: space-between;
+                align-items: center;
                 .card {
-                    width: 31%;
+                    width: 365px;
                     box-shadow: 0px 2px 4px rgba(171, 190, 209, 0.2);
                     border-radius: 8px;
+                    height: 467px;
+                    padding: 24px 32px;
+
 
                     .h2_blue,
                     .body {
-                        padding: map-get($padding, 'p-2');
+                        @include m(){
+                            padding: .5rem;
+                        }
+                        padding: 1rem;
                     }
 
                     .h2_blue {
+                        flex-grow: 0;
                         font-weight: 600;
+                    }
+                    .body {
+                        flex-grow: 1;
+                        width: 80%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    .imgBox {
+                        flex-grow: 0;
+                        width: 230px;
+                        height: 230px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
                     }
                 }
             }
@@ -170,23 +195,38 @@
             }
 
             .row {
+                align-items: center;
+                display: flex;
+                @include t(){
+                    flex-direction: column;
+                    justify-content: center;
+                }
                 .pre-line {
                     white-space: pre-line;
                 }
 
                 .product_card {
+                    display: flex;
+                    flex-direction: column;
                     box-shadow: 0px 2px 4px rgba(171, 190, 209, 0.2);
                     width: 320px;
+                    height: 400px;
                     border-radius: 8px;
                     margin: 8px 12px;
 
-                    button {
+                    a {
+                        flex-grow: 0;
                         margin-top: 16px;
                     }
 
                     h3,
                     .description {
                         margin: 12px 0;
+                    }
+                    .description {
+                        padding: 0 40px;
+                        height: 60px;
+                        flex-grow: 1;
                     }
                 }
             }
@@ -205,7 +245,7 @@
 
         .container {
             .row {
-                .col-3 {
+                .leftBox {
 
                     h2,
                     .body {
@@ -213,7 +253,7 @@
                     }
                 }
 
-                .col-9 {
+                .rightBox {
                     .row {
                         justify-content: end;
                     }
