@@ -4,13 +4,13 @@
     .section01 {
         @include sectionPadding();
 
-        .col-5 {
+        .leftBox {
             p {
                 text-align: right;
                 margin-top: 8px;
             }
         }
-        .col-7 {
+        .rightBox {
             padding: 24px 64px;
             h2 {
                 margin-left: -20px;
@@ -38,6 +38,10 @@
         }
         .row {
             margin: auto;
+            @include t(){
+                justify-content: unset;
+            }
+            justify-content: space-between;
             .card {
                 width: 250px;
                 display: flex;

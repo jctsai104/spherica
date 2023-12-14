@@ -4,6 +4,9 @@
 }
 
 .container {
+    @include t(){
+        width: 100vmax;
+    }
     max-width: $layout_max_width;
     margin: auto;
     padding-left: 15px;
@@ -15,9 +18,6 @@
     flex-wrap: wrap;
     margin-left: -15px;
     margin-right: -15px;
-    @mixin t(){
-        flex-direction: column;
-    }
 }
 
 .center-box {

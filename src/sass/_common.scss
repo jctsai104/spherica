@@ -6,13 +6,16 @@
 body {
    font-family: $fontFamily;
    font-size: 16px;
-   @mixin t() {
-      overflow-x: auto;
-   }
+   width: 100%;
 }
 
 .wrapper {
+   @include d(1024px) {
+      overflow-x: auto;
+      width: 100vmax;
+   }
    width: 100%;
+   overflow-x: unset;
    background-color: $backgroundColor;
    color: $fontColor;
 
